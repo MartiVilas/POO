@@ -39,6 +39,37 @@ class Persona(){
         return this.edat
     }
 
+    fun setDni(dni:String){
+        this.dni=dni
+    }
+
+    fun getDni():String{
+        return this.dni
+    }
+
+    fun setCognom(cognom:String){
+        this.nom=cognom
+    }
+
+    fun getCognom():String{
+        return this.cognoms
+    }
+
+    fun setEstatCivil(estatCivil: Boolean){
+        this.estatCivil=estatCivil
+    }
+
+    fun getEstatCivil():Boolean{
+        return this.estatCivil
+    }
+    fun setNom(nom:String){
+        this.nom=nom
+    }
+
+    fun getNom():String{
+        return this.nom
+    }
+
     fun aniversari(){
         edat+=1
     }
