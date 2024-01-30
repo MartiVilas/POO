@@ -20,6 +20,36 @@ fun llegirInt():Int {
     return num
 }
 
+fun readInt(pMessageIn: String
+            , pMessageErrorDT: String
+            , pMessageErrorDV: String
+            , pMin: Int
+            , pMax: Int
+): Int{
+    val scanner=Scanner(System.`in`)
+    var outputValue: Int = 0
+    var correctDataType: Boolean = false
+
+    do{
+        print(pMessageIn)
+        correctDataType = scanner.hasNextInt()
+
+        if (!correctDataType){
+            println(RED_BACKGROUND_BRIGHT + BLACK_BOLD + "ERROR: " + pMessageErrorDT + RESET)
+        }else{
+            outputValue = scanner.nextInt()
+
+            if (outputValue < pMin || outputValue > pMax){
+                println(YELLOW_BOLD_BRIGHT + "WARNING: " + pMessageErrorDV + RESET)
+                correctDataType = false
+            }
+        }
+        scanner.nextLine()
+    }while(!correctDataType)
+
+    return outputValue
+}
+
 fun llegirDouble():Double {
     val scanner=Scanner(System.`in`)
     var num:Double=0.0
