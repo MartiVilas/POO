@@ -31,6 +31,14 @@ class Persona(){
         this.estatCivil=estatCivil
     }
 
+    fun setEdad(edat:Int){
+        this.edat=edat
+    }
+
+    fun getEdad():Int{
+        return this.edat
+    }
+
     fun aniversari(){
         edat+=1
     }
@@ -42,7 +50,6 @@ class Persona(){
     fun divorci(){
         estatCivil=false
     }
-
 
     override fun toString(): String {
         return  "Dni: $dni\n"+
